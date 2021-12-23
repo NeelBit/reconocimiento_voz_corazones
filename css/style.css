@@ -1,0 +1,256 @@
+:root {
+    --colorBlanco: #eee6e6;
+    --colorNegro: #333;
+    --colorBlue: #2196f3;
+    /* blue darken 3 */
+    --colorBlue: #1565c0;
+    /* red darken 3 */
+    --colorRed: #c62828;
+    /* green darken 3 */
+    --colorGreen: #2e7d32;
+    /* green accent 3 */
+    --colorGreenAccent: #00e676;
+    /* yellow accent 3 */
+    --colorYellowAccent: #ffea00;
+    /* grey darken 2 */
+    --colorGris: #616161;
+
+    --fuente: 'Arvo', serif;
+    /* regular 400 */
+    --fuenteTipoItalic: italic;
+    --fuenteTipoBold: 700;
+
+    --redondeoSuave: 1rem;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--colorBlanco);
+    font-family: var(--fuente);
+    color: var(--colorNegro);
+    font-size: 1.8rem;
+    line-height: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 2rem; */
+}
+
+/* contenedor */
+.contenedor {
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+
+    .contenedor {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .contenedor {
+        width: min(85%, 120rem);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+    font-weight: var(--fuenteTipoBold);
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+p {
+    margin: 0;
+}
+
+/* invisible */
+.invisible {
+    visibility: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* subrayado personalizado */
+.underlinePersonalizado {
+    border-radius: var(--redondeoSuave);
+    background: linear-gradient(90deg, var(--colorGreen) 0%, var(--colorYellowAccent) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.4rem;
+    background-position: 0 90%;
+    transition: all 0.3s ease-in-out;
+}
+
+.underlinePersonalizado:hover {
+    background-size: 100% 90%;
+}
+
+/* Header */
+header {
+    padding: 2rem;
+}
+
+header span {
+    padding: 1rem;
+}
+
+header,
+.contenedor-footer {
+    width: 100%;
+    /* height: 10rem; */
+    color: var(--colorBlanco);
+    text-align: center;
+    background-color: var(--colorGris);
+}
+
+header h1 {
+    text-shadow: black 1px 1px 3px;
+}
+
+/* entrada */
+.entrada {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5rem;
+    /* gap: 10%; */
+    column-gap: 10%;
+}
+
+.entrada__input {
+    flex: 100%;
+    accent-color: var(--colorGreenAccent);
+    padding: 2rem;
+    color: black;
+    outline: none;
+}
+
+.entrada__input,
+.entrada__btn {
+    border: none;
+    border-radius: var(--redondeoSuave);
+    box-shadow: 0px 0px 5px var(--colorGreen);
+
+}
+
+.entrada__btn {
+    padding: 2rem;
+    color: white;
+    text-shadow: black 1px 1px 3px;
+    font-weight: var(--fuenteTipoBold);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrada__btn:hover {
+    cursor: pointer;
+}
+
+.btn-leer {
+    flex: 40%;
+    background-color: var(--colorBlue);
+}
+
+.btn-grabar {
+    flex: 40%;
+    background-color: var(--colorRed);
+}
+
+/* salida */
+.salida {
+    border: .5rem var(--colorNegro) solid;
+    border-radius: var(--redondeoSuave);
+    padding: 2rem;
+    margin-top: 10rem;
+    font-style: var(--fuenteTipoItalic);
+}
+
+
+
+/* corazones */
+.heart {
+    background: #e74c3c;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+.heart::before,
+.heart::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #e74c3c;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -50%;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    right: -50%;
+}
+
+
+
+
+/* footer */
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-footer small {
+    font-size: 1.6rem;
+}
+
+.footer__texto,
+.footer__autor {
+    margin: .2rem auto;
+    display: block;
+}

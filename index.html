@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento de voz</title>
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- fuentes : Arbo: regular 400, regular 400 italic, bold 700 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Lectura de texto a voz y reconocimiento de voz, si reconoce algo, flotan corazones. -->
+
+    <header class="header">
+        <h1><span class="underlinePersonalizado">Reconocimiento de voz</span></h1>
+    </header>
+
+    <main class="contenedor">
+
+        <div class="entrada">
+            <input type="text" class="entrada__input" name="entrada" id="entrada" autofocus>
+            <button type="submit" class="entrada__btn btn-leer">Leer <span class="material-icons">campaign</span></button>
+            <button type="submit" class="entrada__btn btn-grabar">Grabar <span class="material-icons">keyboard_voice</span></button>
+        </div>
+
+        <div class="salida">
+            <p id="salida-contenido"></p>
+        </div>
+
+    </main>
+
+    <div class="corazones invisible">
+
+        <figure>
+            <img src="img/cora.jpg" alt="cora roto">
+        </figure>
+
+    </div>
+
+    <footer class="contenedor-footer">
+        <small class="footer__texto">Todos los derechos reservados 2021</small>
+        <small class="footer__autor">By Neel</small>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
