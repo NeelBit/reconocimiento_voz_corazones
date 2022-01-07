@@ -26,9 +26,14 @@ reconocimiento.onstart = () => {
 
 reconocimiento.onresult = (e) => {
 
+    let arreglo_palabras = e.results[0][0].transcript.split(" ");
+
     if (arreglo_palabras.includes("acuerda")) {
         corazones();
         corazon.classList.remove("invisible");
+    } else if (arreglo_palabras.includes("oscuro")) {
+        document.body.style = "background-color: black;";
+        document.querySelector("p").style = "color: white;";
     }
 
     salida_contenido.innerHTML = e.results[0][0].transcript;
